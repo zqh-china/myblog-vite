@@ -12,10 +12,14 @@
             <span>
               修改于：{{ moment(articleInfo.update_time).format('YYYY-MM-DD HH:mm:ss') }}| By {{ authorInfo.nickname }}
             </span>
-          <a-typography-paragraph v-for="para in paragraphList" :key="para.id"
-              style="text-align: left; margin: 15px; text-indent: 2em;">
-            {{ para.content }}
-          </a-typography-paragraph>
+<!--          <a-typography-paragraph v-for="para in paragraphList" :key="para.id"-->
+<!--              style="text-align: left; margin: 15px; text-indent: 2em;">-->
+<!--            {{ para.content }}-->
+<!--          </a-typography-paragraph>-->
+          <div v-for="para in paragraphList" :key="para.id" style="margin: 15px;">
+            <a-typography-paragraph v-if="para.type === 'text'"  style="text-align: left; text-indent: 2em;">{{ para.content }}</a-typography-paragraph>
+            <a-image v-if="para.type==='img'" :width="400" :src="'http://blog.coollt.cn/imgs/'+para.content"></a-image>
+          </div>
         </a-typography>
       </a-card>
     </a-col>
