@@ -1,9 +1,10 @@
 import axios from 'axios';
-const baseURL = 'http://localhost:3000';
+// const baseURL = 'http://localhost:3000';
 // const headers = {
 //     'Content-Type': 'application/json',
 //     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwidXNlcmlkIjoxLCJpYXQiOjE3MzM2MzA5MzgsImV4cCI6NDMyNTYzMDkzOH0.x7oNAVuAdpk3QO10Uu48GnAWJhZPEeNa8tZF2Zwt6F8',
 // }
+const baseURL = 'http://blog.coollt.cn/api';
 const headers = {
     'Content-Type': 'application/json',
 }
